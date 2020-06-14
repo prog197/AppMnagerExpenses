@@ -60,18 +60,12 @@ class MyHomePage extends StatelessWidget  {
                       if (picked != null) {
                         if (picked.length == 2)
                           model.LoadForPeriod(
-                              new DateTime(picked[0].year, picked[0].month,
-                                  picked[0].day),
-                              new DateTime(picked[1].year, picked[1].month,
-                                  picked[1].day)
-                                  .add(Duration(days: 1)));
+                              picked[0],
+                              picked[1].add(Duration(days: 1)));
                         else
                           model.LoadForPeriod(
-                              new DateTime(picked[0].year, picked[0].month,
-                                  picked[0].day),
-                              new DateTime(picked[0].year, picked[0].month,
-                                  picked[0].day)
-                                  .add(Duration(days: 1)));
+                              picked[0],
+                              picked[0].add(Duration(days: 1)));
                       }
 //                      showDatePicker(
 //                          context: context,
